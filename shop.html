@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="plantSt.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script defer src="shopsc.js"></script>
+
+    <title>Plantarium | Your Favorite Plants Shop</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="logo.png"
+          alt="Plantarium logo"
+          class="nav__logo"
+          id="logo"
+          data-version-number="3.0"
+        />
+        <ul class="nav__links">
+          <!-- <li class="nav__item">
+            <a class="nav__link">About us</a>
+          </li> -->
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link cartmenu">Cart</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="grid-container">
+      <div class="plants">
+        <img class="plantspic peperomia" src="peperomia.webp" />
+      </div>
+      <div class="plants">
+        <img class="plantspic zz-plant" src="zz-plant.jpg" />
+      </div>
+      <div class="plants">
+        <img class="plantspic begonia" src="begonia.jpg" />
+      </div>
+      <div class="plants">
+        <img class="plantspic bird-paradise" src="bird-paradise.jpg" />
+      </div>
+      <div class="plants">
+        <img class="plantspic asparagus-fern" src="asparagus-fern.jpg" />
+      </div>
+      <div class="plants">
+        <img class="plantspic string-of-pearls" src="string-of-pearls.webp" />
+      </div>
+      <div class="plants">
+        <img class="plantspic pothos" src="pothos.png" />
+      </div>
+      <div class="plants">
+        <img class="plantspic peace-lily" src="peace-lily.jpg" />
+      </div>
+      <div class="plants">
+        <img class="plantspic calatea" src="calatea.jpg" />
+      </div>
+      <div class="plants">
+        <img class="plantspic chinese-evergreen" src="chinese-evergreen.webp" />
+      </div>
+      <div class="plants">
+        <img class="plantspic aloe-vera" src="aloe-vera.png" />
+      </div>
+      <div class="plants">
+        <img class="plantspic areca" src="areca.webp" />
+      </div>
+      <div class="plants">
+        <img class="plantspic cacti" src="cacti.jpg" />
+      </div>
+      <div class="plants">
+        <img
+          class="plantspic dracaena-marginata"
+          src="dracaena-marginata.jpg"
+        />
+      </div>
+      <div class="plants">
+        <img class="plantspic orchid" src="orchid.webp" />
+      </div>
+    </div>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">Plant Information</h2>
+      <div class="modal__form">
+        <p class="name">Name:</p>
+        <p class="price">Price:</p>
+        <button class="btn cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <div class="modalcart hidden">
+      <button class="btn--close-modalcart">&times;</button>
+      <h2 class="modalcart__header">Cart</h2>
+      <div class="modalcart__form">
+        <p class="element1"></p>
+        <p class="total"></p>
+        <button class="btn buy">Buy</button>
+      </div>
+    </div>
+    <div class="overlaycart hidden"></div>
+
+    <div class="buy-modal hidden">
+      <button class="btn--close-modalbuy">&times;</button>
+      <h2 class="modalbuy__header">Cashout</h2>
+
+      <div class="modalbuy__form">
+        <p class="sum"></p>
+        <p class="locatPre">Choose the Delivery Address</p>
+        <button class="btn order-product">Order</button>
+      </div>
+      <div class="mapContainer" id="map"></div>
+    </div>
+    <div class="overlaybuy hidden"></div>
+
+    <div class="modalOrdered hidden">
+      <button class="btn--close-modalOrdered">&times;</button>
+      <h2 class="modal__headerOrdered">To Contact You</h2>
+      <div class="modal__formOrdered">
+        <label class="first-name">Your Name:</label>
+        <input class="first-name-in" />
+        <label class="phone-number">Phone Number:</label>
+        <input class="phone-number-in" />
+        <button class="btn submit">Submit</button>
+      </div>
+    </div>
+    <div class="overlayordered hidden"></div>
+
+    <div class="modalDone hidden">
+      <h2 class="modal__headerOrdered">Order received</h2>
+    </div>
+    <div class="overlaydone hidden"></div>
+
+    </div>
+  </body>
+</html>
